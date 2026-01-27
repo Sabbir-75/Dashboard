@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark;
+  themes: synthwave --default;
 }
 
 
@@ -36,8 +36,4 @@
 
   --color-error: rgba(255, 106, 0, 0.3);
   --color-error-content: #FF0404;
-}
-
-body{
-  color: rgba(43, 128, 255, 0.3);
 }
