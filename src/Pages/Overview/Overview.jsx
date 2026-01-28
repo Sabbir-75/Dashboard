@@ -7,6 +7,7 @@ import { MdAccessTime } from "react-icons/md";
 import { GoDependabot } from "react-icons/go";
 import Activity from '../../Components/Activity/Activity';
 import Requests from '../../Components/Requests/Requests';
+import Rechart from '../../Components/Rechart/Rechart';
 
 
 const overview = [
@@ -97,8 +98,9 @@ const Overview = () => {
                     </div>
                 ))
             }
-
-
+        </div>
+        <div className='mt-4 md:mt-5 lg:mt-6'>
+            <Rechart></Rechart>
         </div>
         <div className='mt-4 md:mt-5 lg:mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 lg:gap-6'>
             <Activity></Activity>
