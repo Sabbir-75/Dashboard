@@ -37,3 +37,7 @@
   --color-error: rgba(255, 106, 0, 0.3);
   --color-error-content: #FF0404;
 }
+
+body{
+  color: #57b1ff2c
+}
