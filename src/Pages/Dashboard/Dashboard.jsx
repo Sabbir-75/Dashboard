@@ -104,7 +104,7 @@ const Dashboard = () => {
                                             onMouseEnter={() => setHoverId(item.id)}
                                             onMouseLeave={() => setHoverId(null)}
                                             style={{
-                                                backgroundImage: (hoverId === item.id || (item.link === "overview" && location.pathname == "/")) ? `url(${noice})` : "none",
+                                                backgroundImage: (((hoverId === item.id) || (location.pathname == `/${item.link}`)) || (item.link === "overview" && location.pathname == "/")) ? `url(${noice})` : "none",
                                                 backgroundSize: "cover",
                                                 backgroundPosition: "center",
                                             }}
@@ -112,7 +112,7 @@ const Dashboard = () => {
                                             hover:shadow-[inset_0_1px_18px_2px_#D2EAFF,_0_42px_107px_0_#57b1ff53,_0_24.72px_32.26px_0_#57b1ff2f,_0_10.27px_13.4px_0_#57b1ff38,_0_3.71px_4.85px_0_#57b1ff2c]
                                             ${((location.pathname == `/${item.link}`) || (item.link === "overview" && location.pathname == "/")) && "shadow-[inset_0_1px_18px_2px_#D2EAFF,_0_42px_107px_0_#57b1ff53,_0_24.72px_32.26px_0_#57b1ff2f,_0_10.27px_13.4px_0_#57b1ff38,_0_3.71px_4.85px_0_#57b1ff2c] bg-gradient-to-b from-[#152252] to-[#111B3C] border-b-1 border-white"}
                                             `}
-                                            data-tip="Homepage">
+                                            data-tip={`${item.manuName}`}>
 
                                             <div className='flex items-center gap-3 md:gap-5 lg:gap-7'>
                                                 <img className='w-4 md:w-6 lg:w-8' src={item.image} alt={item.image} />
