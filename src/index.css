@@ -10,7 +10,7 @@
   prefersdark: false;
   color-scheme: "dark";
   --color-base-100: #111B3C;
-  --color-base-200: #111B3C;
+  --color-base-200: rgba(15, 23, 43, 0.5);
   --color-base-300: rgba(15, 15, 43, 0.5);
   --color-base-content: oklch(78% 0.115 274.713);
   --color-primary: #162F61;

@@ -46,7 +46,7 @@ const Dashboard = () => {
     return (
         <div className='max-w-[1440px] bg-[linear-gradient(to_bottom_right,#020618,#162456,#0F172B)] mx-auto'>
             <div className="drawer lg:drawer-open">
-                <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+                <input id="my-drawer-4" type="checkbox" className="drawer-toggle" defaultChecked />
                 <div className="drawer-content">
                     {/* Navbar */}
                     <nav className="navbar w-full bg-base-100 px-1 md:px-4 lg:px-6 py-1 md:py-2 flex items-center justify-between">
@@ -76,10 +76,16 @@ const Dashboard = () => {
 
                     </nav>
 
-                    {/* Page content here */}
-                    <div className="px-4 md:px-5 lg:px-6">
+                  
+
+
+                    <div className="px-4 md:px-5 lg:px-6 pt-4 md:pt-5 lg:pt-6">
                         <Outlet></Outlet>
                     </div>
+
+
+
+
                 </div>
 
                 <div className="drawer-side bg-base-100 stroke-1 border-r-2 border-[#2b80ff33] pt-[26px] md:pt-[30px] lg:pt-[38px] is-drawer-close:overflow-visible duration-200">
@@ -98,7 +104,7 @@ const Dashboard = () => {
                                             onMouseEnter={() => setHoverId(item.id)}
                                             onMouseLeave={() => setHoverId(null)}
                                             style={{
-                                                backgroundImage: (hoverId === item.id || location.pathname == `/${item.link}`) ? `url(${noice})` : "none",
+                                                backgroundImage: (hoverId === item.id || (item.link === "overview" && location.pathname == "/")) ? `url(${noice})` : "none",
                                                 backgroundSize: "cover",
                                                 backgroundPosition: "center",
                                             }}
