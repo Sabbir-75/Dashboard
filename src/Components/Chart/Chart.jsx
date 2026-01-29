@@ -24,11 +24,13 @@ const SimpleAreaChart = () => {
         bottom: 0,
       }}
     >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis domain={[0, 100]} />
+      <CartesianGrid stroke="rgba(255,255,255,0.05)" />
+      <XAxis dataKey="name"  />
+      <YAxis domain={[0, 100]}  />
       <Tooltip />
-      <Area type="monotone" dataKey="uv" stroke="#3b83f6cc" fill="#3b83f6cc" />
+      <Area type="monotone" dataKey="uv"  stroke="#3b83f6"
+          fill="#3b83f6"
+          fillOpacity={0.50} />
     </AreaChart>
   );
 };

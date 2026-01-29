@@ -8,7 +8,7 @@ import logo from "../../assets/logo.png"
 import { IoIosNotifications } from "react-icons/io";
 import { RiMenuUnfold3Fill } from "react-icons/ri";
 import { RiMenuUnfold4Fill } from "react-icons/ri";
-import { NavLink, Outlet, useLocation } from 'react-router';
+import { Link, NavLink, Outlet, useLocation } from 'react-router';
 import { FiLogOut } from "react-icons/fi";
 
 const menu = [
@@ -93,9 +93,9 @@ const Dashboard = () => {
                     <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
 
                     <div className="flex bg-base-100 min-h-full flex-col items-start is-drawer-close:w-14 is-drawer-open:w-61">
-                        <div className='bg-gradient-to-b from-[#00FF88] to-[#00D4FF] rounded-[14px] mx-auto w-9 md:w-12 lg:w-14 h-9 md:h-12 lg:h-14 mb-[30px] md:mb-[50px] lg:mb-[72px] flex justify-center items-center'>
+                        <Link to={"/"} className='bg-gradient-to-b from-[#00FF88] to-[#00D4FF] rounded-[14px] cursor-pointer mx-auto w-9 md:w-12 lg:w-14 h-9 md:h-12 lg:h-14 mb-[30px] md:mb-[50px] lg:mb-[72px] flex justify-center items-center'>
                             <img className='w-4 md:w-6 lg:w-8' src={logo} alt={logo} />
-                        </div>
+                        </Link>
 
                         <ul className="menu w-full grow space-y-4 md:space-y-5 lg:space-y-7">
                             {
@@ -125,9 +125,12 @@ const Dashboard = () => {
                                 ))
                             }
                         </ul>
-                        <div className=' absolute bottom-3 mt-3 text-center px-3 py-2 w-[90%] flex items-center gap-3 rounded-xl bg-red-600 text-white text-md font-medium'>
+                        <div className=' absolute bottom-3 mt-3 text-center px-3 py-2 w-[90%] flex items-center gap-3 rounded-xl bg-red-600 text-white text-lg cursor-pointer font-medium'>
                             <FiLogOut size={23} />
-                            <span>Logout</span>
+                            {
+                              !open && <span>Logout</span> 
+                            }
+                            
                         </div>
                     </div>
 
