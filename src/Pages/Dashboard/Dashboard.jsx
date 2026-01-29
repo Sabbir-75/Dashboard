@@ -9,6 +9,7 @@ import { IoIosNotifications } from "react-icons/io";
 import { RiMenuUnfold3Fill } from "react-icons/ri";
 import { RiMenuUnfold4Fill } from "react-icons/ri";
 import { NavLink, Outlet, useLocation } from 'react-router';
+import { FiLogOut } from "react-icons/fi";
 
 const menu = [
     {
@@ -76,7 +77,7 @@ const Dashboard = () => {
 
                     </nav>
 
-                  
+
 
 
                     <div className="px-4 md:px-5 lg:px-6 pt-4 md:pt-5 lg:pt-6">
@@ -124,7 +125,12 @@ const Dashboard = () => {
                                 ))
                             }
                         </ul>
+                        <div className=' absolute bottom-3 mt-3 text-center px-3 py-2 w-[90%] flex items-center gap-3 rounded-xl bg-red-600 text-white text-md font-medium'>
+                            <FiLogOut size={23} />
+                            <span>Logout</span>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
