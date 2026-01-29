@@ -42,7 +42,6 @@ const Dashboard = () => {
     const [open, setOpen] = useState(false)
     const [hoverId, setHoverId] = useState(null);
     const location = useLocation()
-    console.log(location.pathname)
 
     return (
         <div className='max-w-[1440px] bg-[linear-gradient(to_bottom_right,#020618,#162456,#0F172B)] mx-auto'>
@@ -105,13 +104,13 @@ const Dashboard = () => {
                                             onMouseEnter={() => setHoverId(item.id)}
                                             onMouseLeave={() => setHoverId(null)}
                                             style={{
-                                                backgroundImage: (((hoverId === item.id) || (location.pathname == `/${item.link}`)) || (item.link === "overview" && location.pathname == "/")) ? `url(${noice})` : "none",
+                                                backgroundImage: (((hoverId === item.id) ||  location.pathname.startsWith(`/${item.link}`) || (location.pathname == `/${item.link}`)) || (item.link === "overview" && location.pathname == "/")) ? `url(${noice})` : "none",
                                                 backgroundSize: "cover",
                                                 backgroundPosition: "center",
                                             }}
                                             className={`active:bg-transparent is-drawer-close:tooltip px-2 py-1 hover:bg-gradient-to-b from-[#152252] to-[#111B3C] is-drawer-close:tooltip-right hover:border-b-1 border-b-1 border-transparent hover:border-white duration-200
                                             hover:shadow-[inset_0_1px_18px_2px_#D2EAFF,_0_42px_107px_0_#57b1ff53,_0_24.72px_32.26px_0_#57b1ff2f,_0_10.27px_13.4px_0_#57b1ff38,_0_3.71px_4.85px_0_#57b1ff2c]
-                                            ${((location.pathname == `/${item.link}`) || (item.link === "overview" && location.pathname == "/")) && "shadow-[inset_0_1px_18px_2px_#D2EAFF,_0_42px_107px_0_#57b1ff53,_0_24.72px_32.26px_0_#57b1ff2f,_0_10.27px_13.4px_0_#57b1ff38,_0_3.71px_4.85px_0_#57b1ff2c] bg-gradient-to-b from-[#152252] to-[#111B3C] border-b-1 border-white"}
+                                            ${((hoverId === item.id) ||  location.pathname.startsWith(`/${item.link}`) || (location.pathname == `/${item.link}`) || (item.link === "overview" && location.pathname == "/")) && "shadow-[inset_0_1px_18px_2px_#D2EAFF,_0_42px_107px_0_#57b1ff53,_0_24.72px_32.26px_0_#57b1ff2f,_0_10.27px_13.4px_0_#57b1ff38,_0_3.71px_4.85px_0_#57b1ff2c] bg-gradient-to-b from-[#152252] to-[#111B3C] border-b-1 border-white"}
                                             `}
                                             data-tip={`${item.manuName}`}>
 

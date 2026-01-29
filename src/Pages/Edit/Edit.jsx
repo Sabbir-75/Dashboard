@@ -21,7 +21,7 @@ const Edit = () => {
                     </fieldset>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend text-lg font-medium text-white">Email</legend>
-                        <input type="text" className="input text-white bd-[#3b83f680] border-[2px] border-[#00ff8837] focus:outline-none w-full h-[48px]" placeholder="jane@gmail.com" />
+                        <input type="email" className="input text-white bd-[#3b83f680] border-[2px] border-[#00ff8837] focus:outline-none w-full h-[48px]" placeholder="jane@gmail.com" />
                     </fieldset>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend text-lg font-medium text-white">Store Name</legend>
@@ -32,7 +32,7 @@ const Edit = () => {
                         <input type="text" className="input text-white bd-[#3b83f680] border-[2px] border-[#00ff8837] focus:outline-none w-full h-[48px]" placeholder="123 Main Street, New York" />
                     </fieldset>
                 </div>
-                <div className='max-w-[373px] mx-auto my-10 md:my-16 lg:my-20 bg-[#00C950] text-2xl font-bold text-white flex justify-center items-center rounded-[16px]'>
+                <div className='max-w-[373px] py-2 cursor-pointer mx-auto my-10 md:my-16 lg:my-20 bg-[#00C950] text-2xl font-bold text-white flex justify-center items-center rounded-[16px]'>
                     Save
                 </div>
 

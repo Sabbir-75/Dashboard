@@ -2,8 +2,8 @@ import React from 'react';
 
 const Call = () => {
     return (
-        <div>
-           Call 
+        <div className='text-3xl font-bold text-center text-white'>
+           Call Logs 
         </div>
     );
 };
