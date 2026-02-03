@@ -7,6 +7,7 @@ import Setting from "../Pages/Setting/Setting";
 import Profile from "../Components/Profile/Profile";
 import Edit from "../Pages/Edit/Edit";
 import Details from "../Pages/Details/Details";
+import CallDetails from "../Pages/CallDetails/CallDetails";
 
 export const router = createBrowserRouter([{
    path: "/",
@@ -23,7 +24,11 @@ export const router = createBrowserRouter([{
             {
                index: true,
                Component: Details
-            }
+            },
+            {
+               path: "/phone/:id",
+               Component: CallDetails
+            },
          ]
       },
       {
