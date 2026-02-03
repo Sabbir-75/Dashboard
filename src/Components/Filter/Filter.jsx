@@ -5,7 +5,7 @@ const Filter = () => {
     return (
         <div className="grid grid-cols-12 gap-4 md:gap-6 lg:gap-8 items-center">
             <div className="col-span-12 md:col-span-6">
-                <label className="input w-full border-[2px] bg-[#0f172b83] border-[#2b80ff35] text-[#62748E]
+                <label className="input w-full border-[2px] bg-base-200 border-[#2b80ff35] text-[#62748E]
                       focus-within:outline-none focus-within:ring-0">
                     <svg
                         className="h-[1em] opacity-50"
