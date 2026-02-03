@@ -4,7 +4,7 @@ import { MdArrowDropDown } from 'react-icons/md';
 const Filter = () => {
     return (
         <div className="grid grid-cols-12 gap-4 md:gap-6 lg:gap-8 items-center">
-            <div className="col-span-12 md:col-span-6 lg:col-span-7">
+            <div className="col-span-12 md:col-span-6">
                 <label className="input w-full border-[2px] bg-[#0f172b83] border-[#2b80ff35] text-[#62748E]
                       focus-within:outline-none focus-within:ring-0">
                     <svg
@@ -33,7 +33,7 @@ const Filter = () => {
             </div>
 
         
-            <div className="col-span-12 md:col-span-6 lg:col-span-5 flex justify-end gap-2 md:gap-4 lg:gap-6">
+            <div className="col-span-12 md:col-span-6 flex justify-end gap-2 md:gap-4 lg:gap-6">
 
             
                 <div className="dropdown dropdown-bottom dropdown-end">

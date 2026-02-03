@@ -29,7 +29,7 @@
   --color-info-content: #51A2FF;
 
   --color-success: rgba(0, 255, 136, 0.3);;
-  --color-success-content: #05DF72;
+  --color-success-content: rgb(5, 223, 114);
 
   --color-warning: rgba(255, 106, 0, 0.3);
   --color-warning-content: #FF8904;
@@ -39,5 +39,5 @@
 }
 
 body{
-  color: #2b80ff35
+  color: #05DF72
 }

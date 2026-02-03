@@ -12,7 +12,7 @@ const Table = () => {
     return (
         <>
             <div className="overflow-x-auto">
-                <table className="table table-xs">
+                <table className="table text-center table-xs">
                     <thead>
                         <tr className='text-sm font-normal text-white bg-base-200 h-[60px]'>
                             <th>Client Name</th>

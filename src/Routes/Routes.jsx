@@ -6,6 +6,7 @@ import Appoinment from "../Pages/Appoinment/Appoinment";
 import Setting from "../Pages/Setting/Setting";
 import Profile from "../Components/Profile/Profile";
 import Edit from "../Pages/Edit/Edit";
+import Details from "../Pages/Details/Details";
 
 export const router = createBrowserRouter([{
    path: "/",
@@ -17,7 +18,13 @@ export const router = createBrowserRouter([{
       },
       {
          path: "phone",
-         Component: Call
+         Component: Call,
+         children: [
+            {
+               index: true,
+               Component: Details
+            }
+         ]
       },
       {
          path: "appoinments",
