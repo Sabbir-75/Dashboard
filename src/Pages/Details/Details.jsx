@@ -124,11 +124,11 @@ const Details = () => {
                         </div>
                     </div>
 
-                    {/* Status Badges */}
+                
                     <div className="mb-6 space-y-4">
                         <div>
                             <p className="text-sm text-[#90A1B9] font-normal mb-1">Call Type</p>
-                            <div className={`w-[102px] text-center px-3 py-1 border-[2px]
+                            <div className={`w-[105px] text-center px-3 py-1 border-[2px]
                         text-[#05DF72] bg-gradient-to-r from-[#00c95034] to-[#00bc7d34] border-success
                                            
                                          text-xs font-normal rounded-[10px]`}>{data.result}</div>
@@ -139,13 +139,13 @@ const Details = () => {
                         </div>
                     </div>
 
-                    {/* Audio Button */}
+           
                     <button className="w-full bg-gradient-to-r from-[#ac46ff33] to-[#f6339b33] hover:bg-[rgba(172,70,255,0.1)] cursor-pointer duration-200 py-3 rounded-[14px] flex items-center justify-center gap-2 mb-6 border-[2px] border-[#ac46ff4d]">
                         <Play size={18} className='text-[#C27AFF]' />
                         <span className="text-base font-normal text-[#C27AFF]">Play Audio Recording</span>
                     </button>
 
-                    {/* Transcript Section */}
+         
                     <div className="space-y-3">
                         <div className="flex items-center gap-2 text-[#51A2FF] mb-4">
                             <FileText size={18} />
