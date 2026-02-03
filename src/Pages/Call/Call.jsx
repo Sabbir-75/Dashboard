@@ -1,6 +1,6 @@
 import React from 'react';
 import Filter from '../../Components/Filter/Filter';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigate } from 'react-router';
 import CallContainer from '../../Components/Container/CallContainer/CallContainer';
 import { IoCallOutline } from "react-icons/io5";
 import { FiCheckCircle } from "react-icons/fi";
@@ -59,6 +59,7 @@ export const callListData = [
 
 
 const Call = () => {
+    const navigate = useNavigate()
 
     const colorset = (item) => {
         if (item == "success") {
@@ -77,13 +78,13 @@ const Call = () => {
     return (
         <div className='space-y-3 md:space-y-5 lg:space-y-7'>
             <Filter></Filter>
-            <div className='grid grid-cols-12'>
+            <div className='grid grid-cols-12 gap-4 md:gap-5 lg:gap-7'>
                 <div className='col-span-12 md:col-span-6'>
                     <CallContainer>
                         <h1 className='px-2 md:px-3 lg:px-4 text-lg font-normal text-white py-2 md:py-3 lg:py-4'>Call List</h1>
                         {
                             callListData.map(item => (
-                                <div key={item.id} className='px-2 md:px-3 lg:px-4 border-t-[2px] border-[#2b80ff35] pt-2 md:pt-3 lg:pt-4 pb-1 md:pb-2 lg:pb-3'>
+                                <div onClick={() => navigate(`/phone/${item.id}`)} key={item.id}  className='cursor-pointer px-2 md:px-3 lg:px-4 border-t-[2px] border-[#2b80ff35] pt-2 md:pt-3 lg:pt-4 pb-1 md:pb-2 lg:pb-3'>
                                     <div className='flex justify-between items-start'>
                                         <div className='flex items-center gap-2 md:gap-3'>
                                             <div className='w-[48px] h-[48px] rounded-[14px] p-2 md:p-3 flex justify-center items-center bg-gradient-to-br from-[#2B7FFF] to-[#00B8DB]'>
