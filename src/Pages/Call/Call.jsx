@@ -1,9 +1,10 @@
 import React from 'react';
+import Filter from '../../Components/Filter/Filter';
 
 const Call = () => {
     return (
-        <div className='text-3xl font-bold text-center text-white'>
-           Call Logs 
+        <div className=''>
+           <Filter></Filter>
         </div>
     );
 };
